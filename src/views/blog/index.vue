@@ -113,7 +113,7 @@
                 list-type="picture-card"
                 class="avatar-uploader"
                 :show-upload-list="false"
-                action="http://laravel8.blog.com/api/admin/file"
+                :action="`${baseURL}/admin/file`"
                 @change="avatarPathHandleChange"
               >
                 <a-image
@@ -153,7 +153,7 @@
                 list-type="picture-card"
                 class="avatar-uploader"
                 :show-upload-list="false"
-                action="http://laravel8.blog.com/api/admin/file"
+                :action="`${baseURL}/admin/file`"
                 @change="blogBigBackImgChange"
               >
                 <a-image
@@ -273,7 +273,7 @@
   import { reactive, ref } from 'vue'
   import { useStore } from 'vuex'
   import { patchUser } from '@/api/user.js'
-  import { getBase64 } from '@/utils/image.js'
+  import { baseURL } from '@/config/index.js'
 
   import { isEmpty } from 'lodash-es'
   import { CheckOutlined, EditOutlined } from '@ant-design/icons-vue'
@@ -420,6 +420,7 @@
         avatarPathImageUrl,
         blogBigBackImgChange,
         blogBigBackImgUrl,
+        baseURL,
       }
     },
   }

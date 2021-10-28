@@ -4,7 +4,7 @@
       <a-form-item label="個人動態分享照片" v-bind="validateInfos.thumb">
         <div class="clearfix">
           <a-upload
-            action="http://laravel8.blog.com/api/admin/file"
+            :action="`${baseURL}/admin/file`"
             list-type="picture-card"
             v-model:file-list="fileList"
             @preview="handlePreview"
@@ -42,7 +42,7 @@
   import { map } from 'lodash-es'
 
   import { putNewsfeedApi } from '@/api/newsfeed.js'
-
+  import { baseURL } from '@/config/index.js'
   import { getBase64 } from '@/utils/image.js'
   import mybus from '@/utils/mybus.js'
 
@@ -189,6 +189,7 @@
         handleCancel,
         previewVisible,
         previewImage,
+        baseURL,
       }
     },
   })

@@ -6,7 +6,7 @@
           list-type="picture-card"
           class="avatar-uploader"
           :show-upload-list="false"
-          action="http://laravel8.blog.com/api/admin/file"
+          :action="`${baseURL}/admin/file`"
           @change="handleChange"
         >
           <a-image
@@ -91,7 +91,7 @@
   import { Form, message } from 'ant-design-vue'
   import Vditor from 'vditor'
   import { useRouter } from 'vue-router'
-
+  import { baseURL } from '@/config/index.js'
   import { getCategorie } from '@/api/categories.js'
   import { createArticle } from '@/api/article.js'
 
@@ -278,6 +278,7 @@
         handleChange,
         loading,
         tagOptions,
+        baseURL,
       }
     },
   })

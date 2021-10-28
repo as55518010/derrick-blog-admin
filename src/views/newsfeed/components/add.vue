@@ -4,7 +4,7 @@
       <a-form-item label="個人動態分享照片" v-bind="validateInfos.thumb">
         <div class="clearfix">
           <a-upload
-            action="http://laravel8.blog.com/api/admin/file"
+            :action="`${baseURL}/admin/file`"
             list-type="picture-card"
             v-model:file-list="fileList"
             @preview="handlePreview"
@@ -40,6 +40,7 @@
   import { Form, message } from 'ant-design-vue'
   import Vditor from 'vditor'
   import { map } from 'lodash-es'
+  import { baseURL } from '@/config/index.js'
 
   import { postNewsfeedApi } from '@/api/newsfeed.js'
 
@@ -160,6 +161,7 @@
         handleCancel,
         previewVisible,
         previewImage,
+        baseURL,
       }
     },
   })
