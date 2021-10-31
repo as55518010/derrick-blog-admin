@@ -17,7 +17,8 @@
     },
   }
 </script>
-<style lang="less">
+<style lang="less" scoped>
   @import '~@/vab/styles/vab.less';
   @import '~vditor/dist/index.css';
+  @import '~ant-design-vue/dist/antd.css';
 </style>

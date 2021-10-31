@@ -25,6 +25,8 @@
               />
             </div>
           </td>
+        </tr>
+        <tr class="editable-cell">
           <td>主題樣式</td>
           <td>
             <div
@@ -427,7 +429,7 @@
 </script>
 <style lang="less" scoped>
   .editable-cell {
-    position: relative;
+    width: 100%;
     .editable-cell-input-wrapper,
     .editable-cell-text-wrapper {
       padding-right: 24px;
@@ -478,7 +480,7 @@
         background-color: #fff;
 
         td {
-          position: relative;
+          width: inherit;
           padding: 9px 15px;
           font-size: 14px;
           line-height: 20px;

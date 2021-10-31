@@ -2,7 +2,16 @@
   <div>
     <a-form :labelCol="{ span: 6 }">
       <a-form-item label="文章縮略圖" v-bind="validateInfos.thumb">
+        <a-radio-group v-model:value="thumbSelect">
+          <a-radio-button value="input">輸入URL</a-radio-button>
+          <a-radio-button value="upload">自行上傳</a-radio-button>
+        </a-radio-group>
+        <div v-if="thumbSelect === 'input'">
+          <a-input v-model:value="modelRef.thumb" />
+          <a-image :width="300" :src="modelRef.thumb" />
+        </div>
         <a-upload
+          v-if="thumbSelect === 'upload'"
           list-type="picture-card"
           class="avatar-uploader"
           :show-upload-list="false"
@@ -100,9 +109,9 @@
   export default defineComponent({
     setup() {
       const contentEditor = ref('')
+      const thumbSelect = ref('input')
       const imageUrl = ref('')
       const loading = ref(false)
-      const router = useRouter()
       const id = ref(undefined)
 
       const treeData = ref([
@@ -175,12 +184,12 @@
             message: '請輸入文章標籤',
           },
         ],
-        thumb: [
-          {
-            required: true,
-            message: '請上傳文章縮略圖',
-          },
-        ],
+        // thumb: [
+        //   {
+        //     required: true,
+        //     message: '請上傳文章縮略圖',
+        //   },
+        // ],
         content: [
           {
             required: true,
@@ -302,6 +311,7 @@
         loading,
         tagOptions,
         baseURL,
+        thumbSelect,
       }
     },
   })

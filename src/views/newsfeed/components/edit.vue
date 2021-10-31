@@ -151,7 +151,6 @@
             toRaw(fileList.value),
             (item) => item.url ?? item.response.result.url
           )
-          console.log(toRaw(modelRef))
           await putNewsfeedApi(unref(id), toRaw(modelRef))
           message.success('修改動態時報成功')
           // 重置

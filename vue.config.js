@@ -53,10 +53,9 @@ module.exports = {
       warnings: true,
       errors: true,
     },
-    // 注释掉的地方是前端配置代理访问后端的示例
     proxy: {
       api: {
-        target: `http://laravel8.blog.com`,
+        target: process.env.VUE_PROXY_TARGET_API,
         ws: true,
         changeOrigin: true,
       },

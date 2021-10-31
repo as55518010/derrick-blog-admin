@@ -22,7 +22,7 @@
       @change="paginationChange"
     >
       <template #thumb="{ text }">
-        <a-image :width="100" :src="text" />
+        <a-image :width="100" :src="text ?? 'https://picsum.photos/500'" />
       </template>
       <template #tag="{ text }">
         <a-tag color="cyan" v-for="(n, k) in text" :key="k">{{ n }}</a-tag>
