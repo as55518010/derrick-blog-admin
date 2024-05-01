@@ -1,5 +1,5 @@
 ## 項目介紹
-### 預覽：[https://derrick.tk/derrick-blog-admin/](https://derrick.tk/derrick-blog-admin/)
+### 預覽：[https://as55518010.github.io/derrick-blog-admin/](https://as55518010.github.io/derrick-blog-admin/)
 
 ### 個人優雅簡約的 Blog 後台項目
 - 本項目基於線上開源項目開發的VUE3版本項目
@@ -18,7 +18,7 @@ yarn dev
 yarn build
 ```
 ## 注意
-### 此項目需搭配後端接口使用，可參考 [https://github.com/as55518010/laravel8_blog](https://github.com/as55518010/laravel8_blog)
+### 此項目需搭配後端接口使用，可參考 [https://github.com/as55518010/Back-end-blog](https://github.com/as55518010/Back-end-blog)
 
 ## 後續開發計劃
 
